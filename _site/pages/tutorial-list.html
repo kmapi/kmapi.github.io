@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Grocery Lists</title>
+    <meta name="description" content="How to create a list">
+    <meta name="author" content="Valan Brown">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Kitchen Monki Api V2</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/faq.html">FAQ</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/guides.html">Guides</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Grocery Lists </h1>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <p>Grocery Shopping Lists are a powerful tool with which you can create lists of ingredients you will need to shop for, the brands and amounts of the ingredients, the stores where you want to shop, and even the aisles where to find each ingredient! Lists can be created from a time period on your Meal Planner like, creating a shopping list of ingredients that are needed to cook all of the meals on the Planner for this week. Duplicate ingredients will be combined even if they have different unit types.</p>
+<hr />
+<ul>
+<li><a href='#create-list'>creating a grocery list</a></li>
+
+<li><a href='#create-item'>adding a shopping item</a></li>
+
+<li><a href='#batch-create-item'>batch adding items</a></li>
+
+<li><a href='#delete-list'>removing lists</a></li>
+
+<li><a href='#delete-item'>removing an item</a></li>
+
+<li><a href='#get-list'>get a list</a></li>
+
+<li><a href='#get-all-lists'>get all lists</a></li>
+
+<li><a href='#sample-list'>sample list response</a></li>
+</ul>
+<hr />
+<h3 id='creating_a_list'><a id='create-list'>&nbsp;</a>Creating a list</h3>
+
+<p>The first step is to create a shopping list, no parameters required.</p>
+
+<p>request:</p>
+
+<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/list&#39; \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;create_list&quot;,
+	&quot;id&quot;:[list_id],
+	&quot;data&quot;:{
+		&quot;id&quot;:[list_id],
+		&quot;user_id&quot;:[user_id],
+		&quot;name&quot;:null,
+		&quot;location_id&quot;:0,
+		&quot;location&quot;:null,
+		&quot;created&quot;:1367017548,
+		&quot;modified&quot;:1367017548,
+		&quot;items&quot;:[],
+		&quot;stores&quot;:[]
+	}
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#16' target='blank'>full reference</a><hr />
+<h3 id='adding_an_item_to_the_list'><a id='create-item'>&nbsp;</a>Adding an item to the list</h3>
+
+<p>Adding ingredients to the list is done with the add list item call. There are two required fields, the <em>ingredient_id</em> and the <em>list_id</em> of the list to add to which you created above. The other parameters below help you to specify the brand, quantity and unit type, the store you want to purchase the item, any notes helpful while shopping for the item, and whether the ingredient is a custom ingredient or not. For the unit_text parameter, you provide a string. Kitchen Monki supports most common units of measure and their abbreviations so &#8220;lbs&#8221; and &#8220;pounds&#8221; would map to the same unit of measure.</p>
+
+<p>request:</p>
+
+<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/list/[list_id]/item&#39; \
+	-d ingredient_id=45 \
+	-d ingredient_custom=0 \
+	-d quantity=5 \
+	-d unit_text=lbs \
+	-d recipe_id=50763 \
+	-d store_id=12 \
+	-d brand_item_id=5 \
+	-d brand=Darigold \
+	-d note=big+size \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \
+	-H &quot;Content-Type: application/x-www-form-urlencoded&quot;</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;list_item_add&quot;,
+	&quot;success_message&quot;:&quot;Item(s) were added to grocery list&quot;,
+	&quot;id&quot;:[list_item_id]
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#19' target='blank'>full reference</a><hr />
+<h3 id='batch_adding_an_item_to_the_list'><a id='batch-create-item'>&nbsp;</a>Batch adding an item to the list</h3>
+
+<p>As with some other Kitchen Monki API calls where batch processing would be handy, batch adding items to a list can also be accomplished by providing an array of json objects. As with the above api call - adding a singular item, <em>list_id</em> and <em>ingredient_id</em> are both required. This example calls the same api call as above, however the difference is that the parameter &#8220;data&#8221; is provided, so Kitchen Monki attempts the batch creation functionality.</p>
+
+<p>data parameter in json format:</p>
+
+<pre><code>[
+	{
+		&quot;list_id&quot;:&quot;[list_id]&quot;
+		&quot;ingredient_id&quot;:&quot;[ingredient_id]&quot;,
+		&quot;ingredient_custom&quot;:&quot;0&quot;,
+		&quot;quantity&quot;:&quot;5&quot;,
+		&quot;unit_text&quot;:&quot;lbs&quot;,
+		&quot;recipe_id&quot;:&quot;[recipe_id]&quot;,
+		&quot;store_id&quot;:&quot;[store_id]&quot;,
+		&quot;brand_item_id&quot;:&quot;[brand_item_id]&quot;,
+		&quot;brand&quot;:&quot;Darigold&quot;,
+		&quot;note&quot;:&quot;big size&quot;
+	},
+	...
+]</code></pre>
+
+<p>request:</p>
+
+<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/list/[list_id]/item&#39; \
+	-d data=[form encoded json data parameter] \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \
+	-H &quot;Content-Type: application/x-www-form-urlencoded&quot;</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;list_item_add&quot;,
+	&quot;success_message&quot;:&quot;Item(s) were added to grocery list&quot;,
+	&quot;id&quot;:[list_item_id]
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#19' target='blank'>full reference</a><hr />
+<h3 id='deleting_a_list'><a id='delete-list'>&nbsp;</a>Deleting a list</h3>
+
+<p>Deleting a list is similar to other delete api calls on Kitchen Monki and deleting a list will delete its associated list items from the system as well.</p>
+
+<p>request:</p>
+
+<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/list/[list_id]&#39; \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;delete_list&quot;,
+	&quot;id&quot;:&quot;[list_id]&quot;
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#18' target='blank'>full reference</a><hr />
+<h3 id='deleting_list_items'><a id='delete-item'>&nbsp;</a>Deleting list items</h3>
+
+<p>To delete a specific list item supply the <em>list_item_id</em> to the delete list item call.</p>
+
+<p>request:</p>
+
+<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/list/[list_item_id]/item&#39; \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;delete_list_item&quot;,
+	&quot;id&quot;:&quot;[list_id]&quot;
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#21' target='blank'>full reference</a><hr />
+<h3 id='get_a_list'><a id='get-list'>&nbsp;</a>Get a list</h3>
+
+<p>Retrieving a list is easy, pass the <em>list_id</em> to the get list call and you will get back the list object in the data property of the response which contains all of the list items in the items property of the list object.</p>
+
+<p>request:</p>
+
+<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/list/[list_id]&#39; \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;get_grocery_list&quot;,
+	&quot;user_id&quot;:[user_id],
+	&quot;data&quot;:{
+		&quot;id&quot;:[list_id],
+		&quot;name&quot;:null,
+		&quot;location_id&quot;:0,
+		&quot;location&quot;:null,
+		&quot;created&quot;:1363740879,
+		&quot;modified&quot;:1363740879,
+		&quot;items&quot;:[
+			{
+			...
+			}
+		]
+	}
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#15' target='blank'>full reference</a><hr />
+<h3 id='get_all_lists'><a id='get-all-lists'>&nbsp;</a>Get all lists</h3>
+
+<p>To get a list of all of a user&#8217;s list ids, make the get all lists api call. No parameters are required.</p>
+
+<p>request:</p>
+
+<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/list/all&#39; \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;user_id&quot;:[user_id],
+	&quot;data&quot;:[
+		{
+			&quot;id&quot;:[list_id],
+			&quot;user_id&quot;:[user_id],
+			&quot;name&quot;:null,
+			&quot;created&quot;:1366830792,
+			&quot;modified&quot;:1366830792
+		},
+		...
+	]
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#35' target='blank'>full reference</a><hr />
+<h3 id='sample_list_response_in_json_format'><a id='sample-list'>&nbsp;</a>Sample list response in json format</h3>
+
+<p>Here is a more detailed example of a list response object.</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;get_grocery_list&quot;,
+	&quot;user_id&quot;:[user_id],
+	&quot;data&quot;:{
+		&quot;id&quot;:[list_id],
+		&quot;name&quot;:null,
+		&quot;location_id&quot;:[location_id],
+		&quot;location&quot;:null,
+		&quot;created&quot;:1363740879,
+		&quot;modified&quot;:1363740879,
+		&quot;items&quot;:[
+			{
+				&quot;id&quot;:[list_item_id],
+				&quot;ingredient&quot;:{
+					&quot;id&quot;:[ingredient_id],
+					&quot;name&quot;:&quot;Frozen Chicken Wing&quot;,
+					&quot;name_plural&quot;:&quot;Chicken Wings&quot;,
+					&quot;name_nomenclature&quot;:&quot;Chicken, Frozen Wing&quot;,
+					&quot;measure_type_id&quot;:[unit_id],
+					&quot;custom&quot;:false,
+					&quot;category_id&quot;:[category_id]
+				},
+				&quot;ingredient_formatted&quot;:&quot;12 oz brand4 Frozen Chicken Wing,&quot;,
+				&quot;recipe_id&quot;:[],
+				&quot;store_id&quot;:[store_id],
+				&quot;brand_item_id&quot;:[brand_item_id],
+				&quot;brand_item&quot;:{
+					&quot;id&quot;:[brand_item_id],
+					&quot;brand_family_id&quot;:[brand_family_id],
+					&quot;user_id&quot;:1,
+					&quot;brand_text&quot;:&quot;&quot;,
+					&quot;brand_family&quot;:{
+						&quot;id&quot;:[brand_family_id],
+						&quot;name&quot;:&quot;brand4&quot;
+					}
+				},
+				&quot;brand&quot;:&quot;&quot;,
+				&quot;note&quot;:null,
+				&quot;quantity&quot;:12,
+				&quot;unit_text&quot;:&quot;oz&quot;,
+				&quot;aisle&quot;:{
+					&quot;id&quot;:&quot;[aisle_id]&quot;,
+					&quot;name&quot;:&quot;Frozen Foods&quot;
+				}
+			},
+			...
+		],
+		&quot;stores&quot;:[
+			[...]
+		]
+	}
+}</code></pre>
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2013 Valan Brown
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

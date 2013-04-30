@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ingredients</title>
+    <meta name="description" content="Finding ingredients">
+    <meta name="author" content="Valan Brown">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Kitchen Monki Api V2</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/faq.html">FAQ</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/guides.html">Guides</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Ingredients </h1>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <p>Kitchen Monki Ingredients are standardized ingredient objects used as the basis of creating recipe ingredients or making a shopping list. The difference between ingredients and recipe ingredients is that recipe ingredients are data specific to a recipe containing data such as brand, unit type, quantity, etc. Ingredients are just the pure ingredient data containing the name and category of the ingredient, for instance &#8220;Chicken Wing&#8221;. Ingredient objects are nested inside of recipe ingredient objects and the ids <em>recipe_ingredient_id</em> and <em>ingredient_id</em> do not belong to the same model. The ability to group recipe ingredients by their nested ingredients allows Kitchen Monki to group line items in grocery shopping lists and other tools which combine multiple recipes.</p>
+
+<p>There are thousands of pre-existing ingredients in the Kitchen Monki database, and where at all possible these ingredients should be used. However, should the user not find the exact ingredient they are looking for, the ability to add custom ingredients to the system is available. Custom ingredients added to the system will not be added to the standardized data, but will be added to the system as a custom ingredient associated with the recipe it was created with.</p>
+<hr />
+<ul>
+<li><a href='#search-ingredients'>search ingredients</a></li>
+
+<li><a href='#get-ingredient'>find an ingredient by id</a></li>
+</ul>
+<hr />
+<h3 id='search_ingredients'><a id='search-ingredients'>&nbsp;</a>Search ingredients</h3>
+
+<p>Due to the sheer amount of pre-existing ingredients available, it is recommended to make some sort of autocomplete form control which uses ajax to call the search ingredient api call as the user types input with their keyboard. Using the limit param will allow your application to make choosing an ingredient a user friendly and efficient process.</p>
+
+<p>request:</p>
+
+<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/ingredient/search&#39; \
+	-d text=rice \
+	-d limit=100 \
+	-d offset=1000 \
+	-d array_key=id \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;ingredient_search&quot;,
+	&quot;total&quot;:4381,
+	&quot;limit&quot;:20,
+	&quot;offset&quot;:0,
+	&quot;data&quot;:[
+		{
+			&quot;id&quot;:[ingredient_id],
+			&quot;name&quot;:&quot;Brown Rice&quot;,
+			&quot;name_plural&quot;:&quot;&quot;,
+			&quot;name_nomenclature&quot;:&quot;Rice, Brown&quot;,
+			&quot;category_id&quot;:[category_id]
+		},
+		...
+	]
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#29' target='blank'>full reference</a><hr />
+<h3 id='find_an_ingredient_by_ingredient_id'><a id='get-ingredient'>&nbsp;</a>Find an ingredient by ingredient_id</h3>
+
+<p>If the <em>ingredient_id</em> is known, for example from a recipe ingredient or grocery list item, then you can get the associated ingredient data with the get ingredient api call. Just provide the <em>ingredient_id</em> at the end of the request uri and send the request via the GET method.</p>
+
+<p>request:</p>
+
+<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/ingredient/[ingredient_id]&#39; \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;id&quot;:[ingredient_id],
+	&quot;data&quot;:{
+		&quot;id&quot;:[ingredient_id],
+		&quot;name&quot;:&quot;Frozen Teriyaki Style Chicken Wing&quot;,
+		&quot;name_plural&quot;:&quot;Teriyaki Style Chicken Wings&quot;,
+		&quot;name_nomenclature&quot;:&quot;Chicken, Frozen Teriyaki Style Wing&quot;,
+		&quot;category_id&quot;:10
+	}
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#28' target='blank'>full reference</a>
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2013 Valan Brown
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

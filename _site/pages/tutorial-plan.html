@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Plans</title>
+    <meta name="description" content="A tool to organize your meal planning">
+    <meta name="author" content="Valan Brown">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Kitchen Monki Api V2</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/faq.html">FAQ</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/guides.html">Guides</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Plans </h1>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <hr />
+<ul>
+<li><a href='#create-plan-item'>adding an item to your meal plan</a></li>
+
+<li><a href='#create-plan-note'>adding a note to your meal plan</a></li>
+
+<li><a href='#delete-plan-item'>removing items and notes</a></li>
+
+<li><a href='#get-plan'>get a data from your meal plan</a></li>
+</ul>
+<hr />
+<h3 id='adding_an_item_to_your_meal_plan'><a id='create-plan'>&nbsp;</a>Adding an item to your meal plan</h3>
+
+<p>request:</p>
+
+<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/plan/item&#39; \
+	-d recipe_id=[recipe_id]
+	-d meal=dinner
+	-d date=2013-04-15
+	-d servings=4
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;plan_item_add&quot;,
+	&quot;success_message&quot;:&quot;Item was added to meal plan&quot;,
+	&quot;data&quot;:{
+		&quot;id&quot;:&quot;[plan_item_id]&quot;,
+		&quot;recipe&quot;:{
+			&quot;id&quot;:[recipe_id],
+			&quot;title&quot;:&quot;Herb-roasted Lamb&quot;,
+			...
+		},
+		&quot;date&quot;:&quot;2013-04-29&quot;,
+		&quot;meal&quot;:&quot;dinner&quot;,
+		&quot;servings&quot;:&quot;4&quot;
+	}
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#23' target='blank'>full reference</a><hr />
+<h3 id='adding_an_note_to_your_meal_plan'><a id='create-plan'>&nbsp;</a>Adding an note to your meal plan</h3>
+
+<p>request:</p>
+
+<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/plan/note&#39; \
+	-d meal=dinner
+	-d text=not+too+spicy
+	-d date=2013-04-15
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;plan_note_add&quot;,
+	&quot;success_message&quot;:&quot;Note was added to meal plan&quot;,
+	&quot;data&quot;:{
+		&quot;id&quot;:&quot;[plan_note_id]&quot;,
+		&quot;date&quot;:&quot;2013-04-15&quot;,
+		&quot;meal&quot;:&quot;dinner&quot;,
+		&quot;text&quot;:&quot;not too spicy&quot;
+	}
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#36' target='blank'>full reference</a><hr />
+<h3 id='deleting_items_and_notes'><a id='delete-plan-item'>&nbsp;</a>Deleting items and notes</h3>
+
+<p>&#160;</p>
+
+<h4 id='deleting_an_item'>Deleting an item</h4>
+
+<p>request:</p>
+
+<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/plan/[plan_item_id]&#39; \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;plan_item_delete&quot;,
+	&quot;success_message&quot;:&quot;Meal plan item deleted&quot;,
+	&quot;id&quot;:[plan_item_id]
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#37' target='blank'>full reference</a>
+<p>&#160;</p>
+
+<h4 id='deleting_a_note'>Deleting a note</h4>
+
+<p>request:</p>
+
+<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/plan/[plan_note_id]&#39; \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;plan_note_delete&quot;,
+	&quot;success_message&quot;:&quot;Meal plan note deleted&quot;,
+	&quot;id&quot;:[plan_note_id]
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#38' target='blank'>full reference</a><hr />
+<h3 id='get_a_plan'><a id='get-plan'>&nbsp;</a>Get a plan</h3>
+
+<p>request:</p>
+
+<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/plan/[plan_id]&#39; \
+	-d start=2013-04-08 \
+	-d end=2013-04-12 \
+	-d recipe_return_fields=title,ingredients \
+	-d include_list=1 \
+	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
+
+<p>successful response:</p>
+
+<pre><code>{
+	&quot;success&quot;:&quot;get_meal_plan&quot;,
+	&quot;user_id&quot;:[user_id],
+	&quot;start&quot;:&quot;2013-04-29&quot;,
+	&quot;end&quot;:&quot;2013-05-06&quot;,
+	&quot;data&quot;:{
+		&quot;items&quot;:[
+			{
+				&quot;id&quot;:&quot;[plan_item_id]&quot;,
+				&quot;recipe&quot;:{
+					&quot;id&quot;:[recipe_id],
+					&quot;title&quot;:&quot;Herb-roasted Lamb&quot;,
+					...
+				}
+				&quot;date&quot;:&quot;2013-04-29&quot;,
+				&quot;meal&quot;:&quot;dinner&quot;,
+				&quot;servings&quot;:&quot;4&quot;
+			}
+		],
+		&quot;notes&quot;:[
+			{
+				&quot;id&quot;:&quot;[plan_note_id]&quot;,
+				&quot;date&quot;:&quot;2013-04-29&quot;,
+				&quot;meal&quot;:&quot;dinner&quot;,
+				&quot;text&quot;:&quot;not too spicy&quot;
+			}
+		],
+		&quot;dates&quot;:{
+			&quot;date_2013-04-29&quot;:{
+				&quot;breakfast&quot;:{
+					&quot;items&quot;:[],
+					&quot;notes&quot;:[]
+				},
+				&quot;lunch&quot;:{
+					&quot;items&quot;:[],
+					&quot;notes&quot;:[]
+				},
+				&quot;dinner&quot;:{
+					&quot;items&quot;:[
+						{
+							&quot;id&quot;:&quot;[plan_item_id]&quot;,
+							&quot;recipe&quot;:{
+								&quot;id&quot;:[recipe_id],
+								&quot;title&quot;:&quot;Herb-roasted Lamb&quot;,
+								...
+							},
+							&quot;date&quot;:&quot;2013-04-29&quot;,
+							&quot;meal&quot;:&quot;dinner&quot;,
+							&quot;servings&quot;:&quot;4&quot;
+						}
+					],
+					&quot;notes&quot;:[
+						{
+							&quot;id&quot;:&quot;[plan_note_id]&quot;,
+							&quot;date&quot;:&quot;2013-04-29&quot;,
+							&quot;meal&quot;:&quot;dinner&quot;,
+							&quot;text&quot;:&quot;not too spicy&quot;
+						}
+					]
+				},
+				...
+			}
+		}
+	}
+}</code></pre>
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#22' target='blank'>full reference</a>
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2013 Valan Brown
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

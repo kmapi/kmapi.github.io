@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Kitchen Monki Api V2</title>
+ <link href="http://username.github.io/" rel="self"/>
+ <link href="http://username.github.io"/>
+ <updated>2013-04-30T11:38:26-07:00</updated>
+ <id>http://username.github.io</id>
+ <author>
+   <name>Valan Brown</name>
+   <email>valan@twelve23.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>This API is the best</title>
+   <link href="http://username.github.io/2013/04/25/this-api-is-the-best"/>
+   <updated>2013-04-25T00:00:00-07:00</updated>
+   <id>http://username.github.io/2013/04/25/this-api-is-the-best</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>Best way to update a recipe?</title>
+   <link href="http://username.github.io/2013/04/25/best-way-to-update-a-recipe"/>
+   <updated>2013-04-25T00:00:00-07:00</updated>
+   <id>http://username.github.io/2013/04/25/best-way-to-update-a-recipe</id>
+   <content type="html"></content>
+ </entry>
+ 
+ 
+</feed>
