@@ -203,7 +203,7 @@
 		&quot;stores&quot;:[]
 	}
 }</code></pre>
-<a target='blank' href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#16'>full reference</a><hr />
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#16' target='blank'>full reference</a><hr />
 <h3 id='adding_an_item_to_the_list'><a id='create-item'>&nbsp;</a>Adding an item to the list</h3>
 
 <p>Adding ingredients to the list is done with the add list item call. There are two required fields, the <em>ingredient_id</em> and the <em>list_id</em> of the list to add to which you created above. The other parameters below help you to specify the brand, quantity and unit type, the store you want to purchase the item, any notes helpful while shopping for the item, and whether the ingredient is a custom ingredient or not. For the unit_text parameter, you provide a string. Kitchen Monki supports most common units of measure and their abbreviations so &#8220;lbs&#8221; and &#8220;pounds&#8221; would map to the same unit of measure.</p>
@@ -230,7 +230,7 @@
 	&quot;success_message&quot;:&quot;Item(s) were added to grocery list&quot;,
 	&quot;id&quot;:[list_item_id]
 }</code></pre>
-<a target='blank' href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#19'>full reference</a><hr />
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#19' target='blank'>full reference</a><hr />
 <h3 id='batch_adding_an_item_to_the_list'><a id='batch-create-item'>&nbsp;</a>Batch adding an item to the list</h3>
 
 <p>As with some other Kitchen Monki API calls where batch processing would be handy, batch adding items to a list can also be accomplished by providing an array of json objects. As with the above api call - adding a singular item, <em>list_id</em> and <em>ingredient_id</em> are both required. This example calls the same api call as above, however the difference is that the parameter &#8220;data&#8221; is provided, so Kitchen Monki attempts the batch creation functionality.</p>
@@ -267,7 +267,7 @@
 	&quot;success_message&quot;:&quot;Item(s) were added to grocery list&quot;,
 	&quot;id&quot;:[list_item_id]
 }</code></pre>
-<a target='blank' href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#19'>full reference</a><hr />
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#19' target='blank'>full reference</a><hr />
 <h3 id='deleting_a_list'><a id='delete-list'>&nbsp;</a>Deleting a list</h3>
 
 <p>Deleting a list is similar to other delete api calls on Kitchen Monki and deleting a list will delete its associated list items from the system as well.</p>
@@ -283,7 +283,7 @@
 	&quot;success&quot;:&quot;delete_list&quot;,
 	&quot;id&quot;:&quot;[list_id]&quot;
 }</code></pre>
-<a target='blank' href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#18'>full reference</a><hr />
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#18' target='blank'>full reference</a><hr />
 <h3 id='deleting_list_items'><a id='delete-item'>&nbsp;</a>Deleting list items</h3>
 
 <p>To delete a specific list item supply the <em>list_item_id</em> to the delete list item call.</p>
@@ -299,7 +299,7 @@
 	&quot;success&quot;:&quot;delete_list_item&quot;,
 	&quot;id&quot;:&quot;[list_id]&quot;
 }</code></pre>
-<a target='blank' href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#21'>full reference</a><hr />
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#21' target='blank'>full reference</a><hr />
 <h3 id='get_a_list'><a id='get-list'>&nbsp;</a>Get a list</h3>
 
 <p>Retrieving a list is easy, pass the <em>list_id</em> to the get list call and you will get back the list object in the data property of the response which contains all of the list items in the items property of the list object.</p>
@@ -328,7 +328,7 @@
 		]
 	}
 }</code></pre>
-<a target='blank' href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#15'>full reference</a><hr />
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#15' target='blank'>full reference</a><hr />
 <h3 id='get_all_lists'><a id='get-all-lists'>&nbsp;</a>Get all lists</h3>
 
 <p>To get a list of all of a user&#8217;s list ids, make the get all lists api call. No parameters are required.</p>
@@ -353,7 +353,7 @@
 		...
 	]
 }</code></pre>
-<a target='blank' href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#35'>full reference</a><hr />
+<a href='http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#35' target='blank'>full reference</a><hr />
 <h3 id='sample_list_response_in_json_format'><a id='sample-list'>&nbsp;</a>Sample list response in json format</h3>
 
 <p>Here is a more detailed example of a list response object.</p>

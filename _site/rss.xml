@@ -3,26 +3,26 @@
 <channel>
         <title>Kitchen Monki Api V2</title>
         <description>Kitchen Monki Api V2 - Valan Brown</description>
-        <link>http://username.github.io</link>
-        <link>http://username.github.io</link>
-        <lastBuildDate>2013-04-30T11:45:46-07:00</lastBuildDate>
-        <pubDate>2013-04-30T11:45:46-07:00</pubDate>
+        <link>http://kmapi.github.io</link>
+        <link>http://kmapi.github.io</link>
+        <lastBuildDate>2013-04-30T12:14:33-07:00</lastBuildDate>
+        <pubDate>2013-04-30T12:14:33-07:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
                 <title>This API is the best</title>
                 <description></description>
-                <link>http://username.github.io/2013/04/25/this-api-is-the-best</link>
-                <guid>http://username.github.io/2013/04/25/this-api-is-the-best</guid>
+                <link>http://kmapi.github.io/2013/04/25/this-api-is-the-best</link>
+                <guid>http://kmapi.github.io/2013/04/25/this-api-is-the-best</guid>
                 <pubDate>2013-04-25T00:00:00-07:00</pubDate>
         </item>
 
         <item>
                 <title>Best way to update a recipe?</title>
                 <description></description>
-                <link>http://username.github.io/2013/04/25/best-way-to-update-a-recipe</link>
-                <guid>http://username.github.io/2013/04/25/best-way-to-update-a-recipe</guid>
+                <link>http://kmapi.github.io/2013/04/25/best-way-to-update-a-recipe</link>
+                <guid>http://kmapi.github.io/2013/04/25/best-way-to-update-a-recipe</guid>
                 <pubDate>2013-04-25T00:00:00-07:00</pubDate>
         </item>
 
