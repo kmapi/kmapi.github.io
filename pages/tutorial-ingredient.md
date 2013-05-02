@@ -65,7 +65,7 @@ successful response:
 		]
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#29" target="blank">full reference</a>
+<a href="/console.html?api_id=29" target="blank">full reference</a>
 
 -----------------
 
@@ -94,7 +94,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#28" target="blank">full reference</a>
+<a href="/console.html?api_id=28" target="blank">full reference</a>
 
 
 

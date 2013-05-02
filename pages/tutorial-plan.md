@@ -7,7 +7,11 @@ group: 'tutorial'
 {% include JB/setup %}
 
 
-
+The Meal Planner is a time saving tool to plan out your meals for the week/month.  Its a calendar setup to easily
+add recipes to a specific date and meal.  It is designed to conveniently get meals for a span of dates or a
+specific date, grouped by the meal it was specified as and with the amount of servings chosen for that dish.
+Also built in to Kitchen Monki is the functionality to generate shopping lists over a span of time and yes the
+shopping list items will be grouped if duplicated and the store and location data for them will be included.
 
 -----------------
 
@@ -20,7 +24,10 @@ group: 'tutorial'
 
 ### <a id="create-plan">&nbsp;</a>Adding an item to your meal plan
 
-
+To add a recipe to the meal planner, you must send the *recipe_id* to cook and which meal you plan to cook it in.
+If the date parameter is omitted, Kitchen Monki will set the date for the plan item to 'today', otherwise send
+the date in the format 'YYYY-MM-DD'.  It is highly recommended, but not required to supply the servings parameter
+which will be used in any shopping list item quantity calculations.
 
 request:
 
@@ -49,13 +56,15 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#23" target="blank">full reference</a>
+<a href="/console.html?api_id=23" target="blank">full reference</a>
 
 -----------------
 
 ### <a id="create-plan">&nbsp;</a>Adding an note to your meal plan
 
-
+The add note to plan api call fill the need for users to attach notes or instructions to any specific meal on a
+date of the calendar.  The meal and text parameters for this call are required or you will receive an error.  If
+the date is omitted Kitchen Monki will assume the date be set to 'today'.
 
 request:
 
@@ -78,7 +87,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#36" target="blank">full reference</a>
+<a href="/console.html?api_id=36" target="blank">full reference</a>
 
 -----------------
 
@@ -86,7 +95,8 @@ successful response:
 
 &nbsp;
 
-
+To remove items and notes from the plan simply supply the *plan_item_id* or *plan_note_id* to the request uri
+and make the api calls as specified in the examples below.
 
 #### Deleting an item
 
@@ -103,13 +113,11 @@ successful response:
 		"id":[plan_item_id]
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#37" target="blank">full reference</a>
+<a href="/console.html?api_id=37" target="blank">full reference</a>
 
 &nbsp;
 
 #### Deleting a note
-
-
 
 request:
 
@@ -124,14 +132,19 @@ successful response:
 		"id":[plan_note_id]
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#38" target="blank">full reference</a>
+<a href="/console.html?api_id=38" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="get-plan">&nbsp;</a>Get a plan
 
-
+To retrieve data from the meal plan use the get plan api call.  Start and end date parameters are available to
+specify the period of data request, however if they are omitted Kitchen Monki will return all of the data from
+'today' to 'seven days from now', so all of the data from now (call execution time) to a week from now.  The
+response dataset can become large so the recipe_return_fields parameter is available to narrow down the response
+data to specific fields.  Finally the last parameter include_list is available to tell Kitchen Monki whether or
+not to return the grocery shopping list along with the other data in the response.
 
 request:
 
@@ -210,6 +223,6 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#22" target="blank">full reference</a>
+<a href="/console.html?api_id=22" target="blank">full reference</a>
 
 

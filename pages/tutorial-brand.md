@@ -44,7 +44,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#62" target="blank">full reference</a>
+<a href="/console.html?api_id=62" target="blank">full reference</a>
 
 -----------------
 
@@ -68,7 +68,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#63" target="blank">full reference</a>
+<a href="/console.html?api_id=63" target="blank">full reference</a>
 
 -----------------
 
@@ -92,7 +92,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#68" target="blank">full reference</a>
+<a href="/console.html?api_id=68" target="blank">full reference</a>
 
 &nbsp;
 
@@ -114,7 +114,7 @@ successful response:
 	}
 
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#69" target="blank">full reference</a>
+<a href="/console.html?api_id=69" target="blank">full reference</a>
 
 -----------------
 
@@ -143,7 +143,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#60" target="blank">full reference</a>
+<a href="/console.html?api_id=60" target="blank">full reference</a>
 
 &nbsp;
 
@@ -173,7 +173,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#67" target="blank">full reference</a>
+<a href="/console.html?api_id=67" target="blank">full reference</a>
 
 &nbsp;
 
@@ -199,6 +199,6 @@ successful response:
 		]
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#61" target="blank">full reference</a>
+<a href="/console.html?api_id=61" target="blank">full reference</a>
 
 

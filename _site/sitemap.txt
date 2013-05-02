@@ -3,6 +3,7 @@ http://kmapi.github.io/about.html
 http://kmapi.github.io/archive.html
 http://kmapi.github.io/atom.xml
 http://kmapi.github.io/categories.html
+http://kmapi.github.io/console.html
 http://kmapi.github.io/faq.html
 http://kmapi.github.io/guides.html
 http://kmapi.github.io/index.html

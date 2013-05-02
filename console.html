@@ -1,0 +1,46 @@
+---
+layout: layout2
+title: Console
+header: Console
+group: navigation
+---
+{% include JB/setup %}
+
+
+<script>
+
+$(document).ready(function() {
+
+    var prmstr = window.location.search.substr(1);
+    var prmarr = prmstr.split ("&");
+    var params = {};
+
+    for (var i = 0; i < prmarr.length; i++)
+    {
+        var tmparr = prmarr[i].split("=");
+        params[tmparr[0]] = tmparr[1];
+    }
+
+//    alert(params['api_id']);
+    var anchor = (params['api_id'] != 'undefined') ? '#' + params['api_id'] : '';
+
+    var html = "\
+    <iframe src='http://km.local/api_docs/console" + anchor + "'\
+            frameborder='yes' height='800' width='1000' scrolling='yes'>\
+    </iframe>\
+    ";
+
+    $('#console-iframe').html(html);
+
+});
+
+</script>
+
+<div id='console-iframe'></div>
+
+
+
+<br /><br /><br />
+
+
+

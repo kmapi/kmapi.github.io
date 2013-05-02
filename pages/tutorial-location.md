@@ -7,7 +7,11 @@ group: 'tutorial'
 {% include JB/setup %}
 
 
-
+Locations and stores are available for users to enhance their shopping experience by allowing them to specify
+which stores they would like to purchase grocery list items from.  Users can add new locations to their profile
+and Kitchen Monki will use the Google Places API to match stores that lie within the area.  Only stores that the
+user chooses will be added to their location and a single store can be set to use as default for convenience.
+Once that is setup, the user can dictate where specific grocery list items should be purchased from.
 
 -----------------
 
@@ -25,7 +29,8 @@ group: 'tutorial'
 
 ### <a id="create-location">&nbsp;</a>Creating a location
 
-
+The first step in linking shopping items to a store is creating the location.  No parameters are required, this
+call simply creates a new location for a user.
 
 request:
 
@@ -50,14 +55,16 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#57" target="blank">full reference</a>
+<a href="/console.html?api_id=57" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="update-location">&nbsp;</a>Updating a location and setting it to active
 
-
+This call allows the user to modify the location's name (title), locality (string for the Google Places API to
+search), and an active flag to enable the location.  The *location_id* of the location being modified must be
+provided at the end of the request uri.
 
 request:
 
@@ -75,14 +82,17 @@ successful response:
 		"location_id":"[location_id]"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#57" target="blank">full reference</a>
+<a href="/console.html?api_id=57" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="search-stores">&nbsp;</a>Search for stores by text search
 
-
+The search stores api call executes the procedure to actually query Google's Places API and it returns the data
+as store objects in the data parameter.  The text parameter is required and can be any descriptor that is related
+to mapping a point or area such as a zip code, neighborhood, city, address, etc.  The radius parameter is available
+to constrict or widen the area to search for stores in.
 
 request:
 
@@ -110,14 +120,14 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#52" target="blank">full reference</a>
+<a href="/console.html?api_id=52" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="get-store">&nbsp;</a>Find a store by store_id
 
-
+If a *store_id* is known, then the get store by id api call can be used to request the store's complete information.
 
 request:
 
@@ -141,14 +151,15 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#53" target="blank">full reference</a>
+<a href="/console.html?api_id=53" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="add-store-to-location">&nbsp;</a>Add a store to a location
 
-
+When you're ready to add stores to a user's location, make the add store to location api call to create the
+relationship.  Both parameters *store_id* and *location_id* are required.
 
 request:
 
@@ -163,14 +174,16 @@ successful response:
 		"success":"store_added"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#55" target="blank">full reference</a>
+<a href="/console.html?api_id=55" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="set-store-default">&nbsp;</a>Set store as default for a location
 
-
+When adding shopping list items to a grocery shopping list, its convenient to not have to choose which store to
+purchase from.  Use this call to set a location's default store.  If users add shopping list items without
+specifying a store where to buy it, then the default store will be chosen.
 
 request:
 
@@ -183,14 +196,15 @@ successful response:
 
 
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#55" target="blank">full reference</a>
+<a href="/console.html?api_id=55" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="delete-location">&nbsp;</a>Deleting a location
 
-
+To remove a user's created location, use the delete location api call.  Supply the *location_id* to be deleted
+to the end of the request uri and make the request with the DELETE method.
 
 request:
 
@@ -204,14 +218,15 @@ successful response:
 		"id":"[location_id]"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#" target="blank">full reference</a>
+<a href="/console.html?api_id=" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="get-location">&nbsp;</a>Get a location
 
-
+To get a location's information including all of its associated stores, use the get location api call.  The
+*location_id* must be provided to the request uri as usual.
 
 request:
 
@@ -244,14 +259,15 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#58" target="blank">full reference</a>
+<a href="/console.html?api_id=58" target="blank">full reference</a>
 
 -----------------
 
 
 ### <a id="get-all-locations">&nbsp;</a>Get all locations
 
-
+To get all of a user's locations use the get all locations call.  No parameters required, and all of the store
+and location information will be included in the response data parameter.
 
 request:
 
@@ -291,5 +307,5 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#56" target="blank">full reference</a>
+<a href="/console.html?api_id=56" target="blank">full reference</a>
 

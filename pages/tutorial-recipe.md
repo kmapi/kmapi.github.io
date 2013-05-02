@@ -45,7 +45,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#2" target="blank">full reference</a>
+<a href="/console.html?api_id=2" target="blank">full reference</a>
 
 -----------------
 
@@ -81,7 +81,7 @@ successful response:
 		"recipe_id":"[recipe_id]"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#3" target="blank">full reference</a>
+<a href="/console.html?api_id=3" target="blank">full reference</a>
 
 -----------------
 
@@ -118,7 +118,7 @@ successful response:
 			"ingredients":[]
 		}
 	}
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#2" target="blank">full reference</a>
+<a href="/console.html?api_id=2" target="blank">full reference</a>
 
 -----------------
 
@@ -173,7 +173,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#2" target="blank">full reference</a>
+<a href="/console.html?api_id=2" target="blank">full reference</a>
 
 -----------------
 
@@ -236,7 +236,7 @@ successful response:
 		"recipe_id":"[recipe_id]"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#3" target="blank">full reference</a>
+<a href="/console.html?api_id=3" target="blank">full reference</a>
 -----------------
 
 ### <a id="publish-recipe">&nbsp;</a>Publishing a recipe
@@ -262,7 +262,7 @@ successful response:
 		"modified_time":"2013-04-26 22:26:06"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#64" target="blank">full reference</a>
+<a href="/console.html?api_id=64" target="blank">full reference</a>
 
 -----------------
 
@@ -285,7 +285,7 @@ successful response:
 		"id":"[recipe_id]"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#4" target="blank">full reference</a>
+<a href="/console.html?api_id=4" target="blank">full reference</a>
 
 -----------------
 
@@ -312,7 +312,7 @@ successful response:
 		"id":"[recipe_id]"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#40" target="blank">full reference</a>
+<a href="/console.html?api_id=40" target="blank">full reference</a>
 
 &nbsp;
 
@@ -332,7 +332,7 @@ successful response:
 		"recipe_id":"[recipe_id]"
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#66" target="blank">full reference</a>
+<a href="/console.html?api_id=66" target="blank">full reference</a>
 
 -----------------
 

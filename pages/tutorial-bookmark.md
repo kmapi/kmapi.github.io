@@ -41,7 +41,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#32" target="blank">full reference</a>
+<a href="/console.html?api_id=32" target="blank">full reference</a>
 
 -----------------
 
@@ -69,7 +69,7 @@ successful response:
 		}
 	}
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#33" target="blank">full reference</a>
+<a href="/console.html?api_id=33" target="blank">full reference</a>
 
 -----------------
 
@@ -94,6 +94,6 @@ successful response:
 
 
 
-<a href="http://km.local/api_docs/console?access_token=835fede3570d6eeee08ae94c5bd64d50#11" target="blank">full reference</a>
+<a href="/console.html?api_id=11" target="blank">full reference</a>
 
 
