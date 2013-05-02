@@ -22,10 +22,13 @@ $(document).ready(function() {
     }
 
 //    alert(params['api_id']);
-    var anchor = (params['api_id'] != 'undefined') ? '#' + params['api_id'] : '';
+    var anchor = (typeof params['api_id'] != 'undefined') ? '#' + params['api_id'] : '';
+
+    var iframe_src = "https://dev.kitchenmonki.com/api_docs/console";
+    iframe_src = iframe_src + anchor;
 
     var html = "\
-    <iframe src='http://km.local/api_docs/console" + anchor + "'\
+    <iframe src='" + iframe_src + "'\
             frameborder='yes' height='800' width='1000' scrolling='yes'>\
     </iframe>\
     ";

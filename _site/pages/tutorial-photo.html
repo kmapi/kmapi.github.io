@@ -205,7 +205,7 @@
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
 
 <p>successful response:</p>
-<a href='/console.html?api_id=47' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=47'>full reference</a><hr />
 <h3 id='updating_a_photo'><a id='update-photo'>&nbsp;</a>Updating a photo</h3>
 
 <p>After uploading images via the add photo api call, you can set one of them as the main image designed to be used anytime that the layout expects one image. When getting image objects back nested in a recipe object, the property is_main will be set to 1 for the main recipe photo object.</p>
@@ -217,7 +217,7 @@
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
 
 <p>successful response:</p>
-<a href='/console.html?api_id=48' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=48'>full reference</a><hr />
 <h3 id='removing_a_photo'><a id='delete-photo'>&nbsp;</a>Removing a photo</h3>
 
 <p>If no longer needed, photos can be deleted from Kitchen Monki. Provide the <em>photo_id</em> in the request uri to the delete photo api call.</p>
@@ -233,7 +233,7 @@
 	&quot;success&quot;:&quot;delete_photo&quot;,
 	&quot;id&quot;:&quot;[photo_id]&quot;
 }</code></pre>
-<a href='/console.html?api_id=49' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=49'>full reference</a><hr />
 <h3 id='getting_a_photo'><a id='get-photo'>&nbsp;</a>Getting a photo</h3>
 
 <p>If the <em>photo_id</em> is known, you can request a scaled version of the image from the get photo api call. Of course the <em>photo_id</em> is required, and also available are options to specify the desired width and height. The adaptive parameter set to 1 will get the image with the desired width and height (in pixels) from the center of the image. If adaptive is set to 0, the response will contain an image that is the complete image, but scaled to the width and height values in pixels. If the width and height parameters are omitted from the call, Kitchen Monki will use width=100px and height=100px as the default values. By default also adaptive will be set to 1 if omitted.</p>
@@ -247,7 +247,7 @@
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
-<a href='/console.html?api_id=45' target='blank'>full reference</a>
+<a target='blank' href='/console.html?api_id=45'>full reference</a>
   </div>
 </div>
 

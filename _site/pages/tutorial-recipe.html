@@ -221,7 +221,7 @@
 		...
 	}
 }</code></pre>
-<a href='/console.html?api_id=2' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=2'>full reference</a><hr />
 <h3 id='updating_a_recipe'><a id='update-recipe'>&nbsp;</a>Updating a recipe</h3>
 
 <p>Once you have created a recipe, now call the update recipe api call to modify it. This is done with a json object as shown below, then it must be form encoded and sent as the parameter &#8220;data&#8221; in the a PUT request. The <em>recipe_id</em> received from the create recipe call must be included at the end of the uri as shown below.</p>
@@ -249,7 +249,7 @@
 	&quot;success_message&quot;:&quot;Updated recipe data&quot;,
 	&quot;recipe_id&quot;:&quot;[recipe_id]&quot;
 }</code></pre>
-<a href='/console.html?api_id=3' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=3'>full reference</a><hr />
 <h3 id='adding_a_step_to_the_recipe'><a id='create-step'>&nbsp;</a>Adding a step to the recipe</h3>
 
 <p>As in the real world, when executing a recipe there are several steps to follow. Use the add recipe step call to add new steps to an existing recipe. The only required parameter for this call is the <em>recipe_id</em> to add the step to. When adding a step, you can give it a title, a description, and a sequence (the step number or order in which it should be displayed/performed). Besides those fields, in the next section we will show you how to add ingredients to your step.</p>
@@ -278,7 +278,7 @@
 		&quot;ingredients&quot;:[]
 	}
 }</code></pre>
-<a href='/console.html?api_id=2' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=2'>full reference</a><hr />
 <h3 id='adding_an_ingredient_to_the_recipe_step'><a id='create-ingredient'>&nbsp;</a>Adding an ingredient to the recipe step</h3>
 
 <p>Now that you have created a step describing what to do for that part of the recipe, you will need to add the ingredients that will be needed during the step. The Kitchen Monki API has thousands of ingredients available to choose from, but should you need to add a custom ingredient you can. Required parameters are the <em>recipe_id</em> and the <em>ingredient_id</em> unless you set <em>ingredient_custom</em> to 1, then you do not need to provide the <em>ingredient_id</em> instead a new custom ingredient will be added to the Kitchen Monki database. Also, when cooking with an ingredient you need to know how much to use and whether a specific brand is desired. Kitchen Monki has a wide listing of unit measures and brands to specify the requirement for the cooking step. Simply provide the proper <em>unit_id</em>, <em>brand_item_id</em>, and <em>amount</em> to the add recipe ingredient call and Kitchen Monki will take care of the rest. When using the Recipe Tools such as the Grocery Shopping list, the system knows how to combine your items for you even if the units don&#8217;t match. Note below that <em>recipe_ingredient_id</em> is different from <em>ingredient_id</em>. The <em>recipe_ingredient_id</em> is the id of the the ingredient data used in this specific recipe which includes unit, brand, and other information. the <em>ingredient_id</em> is the id of the generic ingredient data used by all Kitchen Monki users.</p>
@@ -316,7 +316,7 @@
 		&quot;brand_item&quot;:null
 	}
 }</code></pre>
-<a href='/console.html?api_id=2' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=2'>full reference</a><hr />
 <h3 id='updating_and_batch_adding_recipe_steps_and_ingredients'><a id='updating-steps'>&nbsp;</a>Updating and Batch adding recipe steps and ingredients</h3>
 
 <p>Notice below that the api call used in this section is the same update recipe call as described above. This call is very versatile due to the fact that it takes a json object as one of its parameters. Besides just updating basic recipe information like title and description, you can update its nested objects like steps and ingredients. In fact it is the only way to update them. Additionally, this api call can be used to batch add steps or ingredients.</p>
@@ -365,7 +365,7 @@
 	&quot;success_message&quot;:&quot;Updated recipe data&quot;,
 	&quot;recipe_id&quot;:&quot;[recipe_id]&quot;
 }</code></pre>
-<a href='/console.html?api_id=3' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=3'>full reference</a><hr />
 <h3 id='publishing_a_recipe'><a id='publish-recipe'>&nbsp;</a>Publishing a recipe</h3>
 
 <p>Once you are ready to let the world view your new recipe then publish it with the publish recipe api call. Just include the <em>recipe_id</em> in the call as shown below and it will be set to live. One thing to note, if you have created recipe ingredients which do not have a specified <em>recipe_step_id</em> set, then you will receive an error. You must use the update recipe call to set the <em>recipe_step_id</em> for each recipe ingredient missing one, then try to republish.</p>
@@ -384,7 +384,7 @@
 	&quot;created_time&quot;:&quot;2013-04-26 01:19:52&quot;,
 	&quot;modified_time&quot;:&quot;2013-04-26 22:26:06&quot;
 }</code></pre>
-<a href='/console.html?api_id=64' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=64'>full reference</a><hr />
 <h3 id='deleting_a_recipe'><a id='delete-recipe'>&nbsp;</a>Deleting a recipe</h3>
 
 <p>To discard the recipe, simply call the delete recipe api call as shown below with the DELETE method. The <em>recipe_id</em> received from the create recipe call must be included at the end of the uri. Removing a recipe will also remove all of the steps and recipe ingredients associated with the recipe to be deleted.</p>
@@ -400,7 +400,7 @@
 	&quot;success&quot;:&quot;delete_recipe&quot;,
 	&quot;id&quot;:&quot;[recipe_id]&quot;
 }</code></pre>
-<a href='/console.html?api_id=4' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=4'>full reference</a><hr />
 <h3 id='deleting_recipe_steps_and_ingredients'><a id='delete-step'>&nbsp;</a>Deleting recipe steps and ingredients</h3>
 
 <p>Removing recipe steps and ingredients works nearly the same as removing a recipe as shown below. When removing a step or ingredient, you must provide the recipe_step_id or recipe_ingredient_id, and the corresponding recipe_id. As recipe ingredients are attached to a step, when deleting a step, its recipe ingredients will automatically be deleted as well.</p>
@@ -420,7 +420,7 @@
 	&quot;success&quot;:&quot;delete_recipe_step&quot;,
 	&quot;id&quot;:&quot;[recipe_id]&quot;
 }</code></pre>
-<a href='/console.html?api_id=40' target='blank'>full reference</a>
+<a target='blank' href='/console.html?api_id=40'>full reference</a>
 <p>&#160;</p>
 
 <h4 id='deleting_a_recipe_ingredient'>Deleting a recipe ingredient</h4>
@@ -438,7 +438,7 @@
 	&quot;ingredient_id&quot;:&quot;[recipe_ingredient_id]&quot;,
 	&quot;recipe_id&quot;:&quot;[recipe_id]&quot;
 }</code></pre>
-<a href='/console.html?api_id=66' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=66'>full reference</a><hr />
 <h3 id='sample_recipe_response_in_json_format'><a id='sample-recipe'>&nbsp;</a>Sample recipe response in json format</h3>
 
 <p>Recipe objects come back in the data property of the json response. Below is an example of recipe object returned which includes a great amount of useful information.</p>
