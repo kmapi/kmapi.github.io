@@ -7,7 +7,8 @@ group: 'tutorial'
 {% include JB/setup %}
 
 
-
+Kitchen Monki has a section in the api for recipe meta tags.  They are an important part of grouping recipes and
+searching them.
 
 -----------------
 
@@ -19,7 +20,8 @@ group: 'tutorial'
 
 ### <a id="get-all-metas">&nbsp;</a>Get a list of all meta tags
 
-
+This api call will return a complete list of tags available to attach to user created recipes.  All of the
+pertinent tag information will also be returned in the data parameter as an array of meta objects.
 
 request:
 
@@ -51,7 +53,8 @@ successful response:
 
 ### <a id="get-meta-totals">&nbsp;</a>Getting meta totals
 
-
+The get meta totals call returns a user's information relating to the Kitchen Monki Recipe Tools and other stats
+like the number of recipes they have created.
 
 request:
 

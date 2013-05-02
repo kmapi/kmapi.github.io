@@ -76,6 +76,14 @@
     
       
       	
+      	<li><a href="/download.html">Download</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li><a href="/faq.html">FAQ</a></li>
       	
       
@@ -89,6 +97,14 @@
       
     
   
+    
+  
+    
+      
+    
+  
+    
+      
     
   
     
@@ -165,7 +181,8 @@
 
 <div class="row-fluid">
   <div class="span12">
-    <hr />
+    <p>Kitchen Monki has a section in the api for recipe meta tags. They are an important part of grouping recipes and searching them.</p>
+<hr />
 <ul>
 <li><a href='#get-all-metas'>get all meta tags</a></li>
 
@@ -173,6 +190,8 @@
 </ul>
 <hr />
 <h3 id='get_a_list_of_all_meta_tags'><a id='get-all-metas'>&nbsp;</a>Get a list of all meta tags</h3>
+
+<p>This api call will return a complete list of tags available to attach to user created recipes. All of the pertinent tag information will also be returned in the data parameter as an array of meta objects.</p>
 
 <p>request:</p>
 
@@ -196,8 +215,10 @@
 		...
 	]
 }</code></pre>
-<a href='/console.html?api_id=42' target='blank'>full reference</a><hr />
+<a target='blank' href='/console.html?api_id=42'>full reference</a><hr />
 <h3 id='getting_meta_totals'><a id='get-meta-totals'>&nbsp;</a>Getting meta totals</h3>
+
+<p>The get meta totals call returns a user&#8217;s information relating to the Kitchen Monki Recipe Tools and other stats like the number of recipes they have created.</p>
 
 <p>request:</p>
 
@@ -217,7 +238,7 @@
 		&quot;plan&quot;:0
 	}
 }</code></pre>
-<a href='/console.html?api_id=41' target='blank'>full reference</a>
+<a target='blank' href='/console.html?api_id=41'>full reference</a>
   </div>
 </div>
 

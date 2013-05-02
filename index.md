@@ -36,6 +36,10 @@ The photo section of the api exists to facilitate adding recipe photos user crea
 Amazon S3 to store the uploaded images.  Of course multiple images can be uploaded per recipe and there are
 options provided on how the image should be cropped and scaled.
 
+Kitchen Monki has a section in the api for recipe meta tags.  They are an important part of grouping recipes and
+searching them.
+
+
 ------------
 #### Using the Recipe Tools
 

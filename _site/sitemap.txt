@@ -4,6 +4,7 @@ http://kmapi.github.io/archive.html
 http://kmapi.github.io/atom.xml
 http://kmapi.github.io/categories.html
 http://kmapi.github.io/console.html
+http://kmapi.github.io/download.html
 http://kmapi.github.io/faq.html
 http://kmapi.github.io/guides.html
 http://kmapi.github.io/index.html
@@ -18,6 +19,8 @@ http://kmapi.github.io/pages/tutorial-photo.html
 http://kmapi.github.io/pages/tutorial-plan.html
 http://kmapi.github.io/pages/tutorial-queue.html
 http://kmapi.github.io/pages/tutorial-recipe.html
+http://kmapi.github.io/pages/tutorial-user-friends.html
+http://kmapi.github.io/pages/tutorial-user.html
 http://kmapi.github.io/rss.xml
 http://kmapi.github.io/sitemap.txt
 http://kmapi.github.io/tags.html
