@@ -6,6 +6,19 @@ group: navigation
 ---
 {% include JB/setup %}
 
+<p>
+    Here's a list of tutorials and step-by-step guides to get you started using the Kitchen Monki API quickly.
+    All of our api calls require an access token so if you don't already have one, you should begin by reading
+    the authentication guide.  In our tutorials, all of our examples use curl command line to send the requests
+    so please make sure that your system has curl installed if you would like to run our examples in your shell.
+    Go to <a href="http://curl.haxx.se/docs/install.html">http://curl.haxx.se/docs/install.html</a> for installation
+    instructions.  If you will be sending the api calls via serverside scripts or something else like a browser
+    plugin, then '-d' lines are form parameters and '-H' lines are http headers.  Also note that the Kitchen Monki
+    API expects the request parameters to be form encoded in the body of the request if not using the GET method.
+</p>
+
+<hr />
+
 <h2>Getting Started</h2>
 <ul>
 {% assign pages_list = site.pages %}
