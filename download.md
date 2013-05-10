@@ -9,31 +9,28 @@ group: navigation
 
 
 ### PHP:
-* [https://github.com/kmapi/php-kmapi](https://github.com/kmapi/php-kmapi)
-
-	git clone git@github.com:kmapi/php-kmapi.git
+* [km.php.zip](/libs/km.php.zip)
 
 &nbsp;
 
 ### Python:
-* [https://github.com/kmapi/python-kmapi](https://github.com/kmapi/python-kmapi)
+* [coming soon](https://github.com/kmapi/python-kmapi)
 
-	git clone git@github.com:kmapi/python-kmapi.git
-	
 &nbsp;
 
 ### Ruby:
-* [https://github.com/kmapi/ruby-kmapi](https://github.com/kmapi/ruby-kmapi)
+* [coming soon](https://github.com/kmapi/ruby-kmapi)
 
-	git clone git@github.com:kmapi/ruby-kmapi.git
-	
+&nbsp;
+
+### Java:
+* [coming soon](https://github.com/kmapi/java-kmapi)
+
 &nbsp;
 
 ### Node JS:
-* [https://github.com/kmapi/nodejs-kmapi](https://github.com/kmapi/nodejs-kmapi)
+* [coming soon](https://github.com/kmapi/nodejs-kmapi)
 
-	git clone git@github.com:kmapi/nodejs-kmapi.git
-	
 
 
 

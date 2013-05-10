@@ -74,7 +74,7 @@ group: getting-started
 -----------------
 
 
-## <a id="kitchen-monki-api">&nbsp;</a><a href='http://kmapi.github.io'>Kitchen Monki API</a>
+## <a id="kitchen-monki-api">&nbsp;</a><a href='http://kmapi.github.io' target='_blank'>Kitchen Monki API</a>
 
 &nbsp;
 
@@ -123,6 +123,7 @@ parameters, default values, possible error codes with descriptions, and the live
 #### Technical implementation
 * REST API
 * OAuth2
+* Solr search engine
 * JSON response format
 
 &nbsp;
@@ -133,7 +134,7 @@ parameters, default values, possible error codes with descriptions, and the live
 -----------------
 
 
-## <a id="yummly-api">&nbsp;</a><a href='https://developer.yummly.com/#api'>Yummly API</a>
+## <a id="yummly-api">&nbsp;</a><a href='https://developer.yummly.com/#api' target='_blank'>Yummly API</a>
 
 &nbsp;
 
@@ -197,7 +198,7 @@ parameters, sample JSON responses, and specific API requirements
 -----------------
 
 
-## <a id="big-oven-api">&nbsp;</a><a href='http://api.bigoven.com/'>Big Oven API</a>
+## <a id="big-oven-api">&nbsp;</a><a href='http://api.bigoven.com/' target='_blank'>Big Oven API</a>
 
 &nbsp;
 
