@@ -43,6 +43,7 @@ group: getting-started
 	<li>
 		Cons:<br />
 		<ul>
+			<li>Only 2 API calls available!  Get and search recipes</li>
 			<li>Users can not add their own recipes</li>
 			<li>Recipes are scraped from other websites around the web, not original content</li>
 			<li>Developer resources are lacking</li>

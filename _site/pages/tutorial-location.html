@@ -1,47 +1,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Locations and Stores</title>
-    <meta name="description" content="How to use locations and stores">
-    <meta name="author" content="Valan Brown">
+	<head>
+		<meta charset="utf-8">
+		<title>Locations and Stores</title>
+		<meta name="description" content="How to use locations and stores">
+		<meta name="author" content="Valan Brown">
 
-    <!-- Enable responsive viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Enable responsive viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 
-    <!-- Le styles -->
-    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+		<!-- Le styles -->
+		<link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+		<link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
-    <!-- Le fav and touch icons -->
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+		<!-- Le fav and touch icons -->
+	<!-- Update these with your own images
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	-->
 
-    <!-- atom & rss feed -->
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+		<!-- atom & rss feed -->
+		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+		<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
-  </head>
+	</head>
 
-  <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container-narrow">
-          <a class="brand" href="/">Kitchen Monki Api V2</a>
-          <ul class="nav">
-            
-            
-            
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container-narrow">
+					<a class="brand" href="/">Kitchen Monki Api V2</a>
+					<ul class="nav">
+						
+						
+						
 
 
   
@@ -167,18 +167,27 @@
       
     
   
+    
+      
+    
+  
 
 
 
-          </ul>
-        </div>
-      </div>
-    </div>
+						<li style='margin-top:1px;'>
+							<a href="/pages/ideas.html" style='display:inline;'>
+								<img src='/assets/images/idea.png' />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
-    <div class="container-narrow">
+		<div class="container-narrow">
 
-      <div class="content">
-        
+			<div class="content">
+				
 <div class="page-header">
   <h1>Locations and Stores </h1>
 </div>
@@ -233,7 +242,7 @@
 		&quot;stores&quot;:[]
 	}
 }</code></pre>
-<a target='blank' href='/console.html?api_id=57'>full reference</a><hr />
+<a href='/console.html?api_id=57' target='blank'>full reference</a><hr />
 <h3 id='updating_a_location_and_setting_it_to_active'><a id='update-location'>&nbsp;</a>Updating a location and setting it to active</h3>
 
 <p>This call allows the user to modify the location&#8217;s name (title), locality (string for the Google Places API to search), and an active flag to enable the location. The <em>location_id</em> of the location being modified must be provided at the end of the request uri.</p>
@@ -253,7 +262,7 @@
 	&quot;success_message&quot;:&quot;Updated location data&quot;,
 	&quot;location_id&quot;:&quot;[location_id]&quot;
 }</code></pre>
-<a target='blank' href='/console.html?api_id=57'>full reference</a><hr />
+<a href='/console.html?api_id=57' target='blank'>full reference</a><hr />
 <h3 id='search_for_stores_by_text_search'><a id='search-stores'>&nbsp;</a>Search for stores by text search</h3>
 
 <p>The search stores api call executes the procedure to actually query Google&#8217;s Places API and it returns the data as store objects in the data parameter. The text parameter is required and can be any descriptor that is related to mapping a point or area such as a zip code, neighborhood, city, address, etc. The radius parameter is available to constrict or widen the area to search for stores in.</p>
@@ -283,7 +292,7 @@
 		...
 	}
 }</code></pre>
-<a target='blank' href='/console.html?api_id=52'>full reference</a><hr />
+<a href='/console.html?api_id=52' target='blank'>full reference</a><hr />
 <h3 id='find_a_store_by_store_id'><a id='get-store'>&nbsp;</a>Find a store by store_id</h3>
 
 <p>If a <em>store_id</em> is known, then the get store by id api call can be used to request the store&#8217;s complete information.</p>
@@ -309,7 +318,7 @@
 		&quot;lon&quot;:&quot;-122.327013&quot;
 	}
 }</code></pre>
-<a target='blank' href='/console.html?api_id=53'>full reference</a><hr />
+<a href='/console.html?api_id=53' target='blank'>full reference</a><hr />
 <h3 id='add_a_store_to_a_location'><a id='add-store-to-location'>&nbsp;</a>Add a store to a location</h3>
 
 <p>When you&#8217;re ready to add stores to a user&#8217;s location, make the add store to location api call to create the relationship. Both parameters <em>store_id</em> and <em>location_id</em> are required.</p>
@@ -326,7 +335,7 @@
 <pre><code>{
 	&quot;success&quot;:&quot;store_added&quot;
 }</code></pre>
-<a target='blank' href='/console.html?api_id=55'>full reference</a><hr />
+<a href='/console.html?api_id=55' target='blank'>full reference</a><hr />
 <h3 id='set_store_as_default_for_a_location'><a id='set-store-default'>&nbsp;</a>Set store as default for a location</h3>
 
 <p>When adding shopping list items to a grocery shopping list, its convenient to not have to choose which store to purchase from. Use this call to set a location&#8217;s default store. If users add shopping list items without specifying a store where to buy it, then the default store will be chosen.</p>
@@ -339,7 +348,7 @@
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
-<a target='blank' href='/console.html?api_id=55'>full reference</a><hr />
+<a href='/console.html?api_id=55' target='blank'>full reference</a><hr />
 <h3 id='deleting_a_location'><a id='delete-location'>&nbsp;</a>Deleting a location</h3>
 
 <p>To remove a user&#8217;s created location, use the delete location api call. Supply the <em>location_id</em> to be deleted to the end of the request uri and make the request with the DELETE method.</p>
@@ -355,7 +364,7 @@
 	&quot;success&quot;:&quot;delete_location&quot;,
 	&quot;id&quot;:&quot;[location_id]&quot;
 }</code></pre>
-<a target='blank' href='/console.html?api_id='>full reference</a><hr />
+<a href='/console.html?api_id=' target='blank'>full reference</a><hr />
 <h3 id='get_a_location'><a id='get-location'>&nbsp;</a>Get a location</h3>
 
 <p>To get a location&#8217;s information including all of its associated stores, use the get location api call. The <em>location_id</em> must be provided to the request uri as usual.</p>
@@ -390,7 +399,7 @@
 		}
 	}
 }</code></pre>
-<a target='blank' href='/console.html?api_id=58'>full reference</a><hr />
+<a href='/console.html?api_id=58' target='blank'>full reference</a><hr />
 <h3 id='get_all_locations'><a id='get-all-locations'>&nbsp;</a>Get all locations</h3>
 
 <p>To get all of a user&#8217;s locations use the get all locations call. No parameters required, and all of the store and location information will be included in the response data parameter.</p>
@@ -432,23 +441,23 @@
 		...
 	}
 }</code></pre>
-<a target='blank' href='/console.html?api_id=56'>full reference</a>
+<a href='/console.html?api_id=56' target='blank'>full reference</a>
   </div>
 </div>
 
 
-      </div>
-      <hr>
-      <footer>
-        <p>&copy; 2013 Valan Brown
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
-      </footer>
+			</div>
+			<hr>
+			<footer>
+				<p>&copy; 2013 Valan Brown
+					with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+					and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+				</p>
+			</footer>
 
-    </div>
+		</div>
 
-    
-  </body>
+		
+	</body>
 </html>
 

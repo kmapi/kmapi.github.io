@@ -10,6 +10,7 @@ http://kmapi.github.io/guides.html
 http://kmapi.github.io/index.html
 http://kmapi.github.io/pages/authentication.html
 http://kmapi.github.io/pages/comparison.html
+http://kmapi.github.io/pages/ideas.html
 http://kmapi.github.io/pages/tutorial-bookmark.html
 http://kmapi.github.io/pages/tutorial-brand.html
 http://kmapi.github.io/pages/tutorial-ingredient.html
