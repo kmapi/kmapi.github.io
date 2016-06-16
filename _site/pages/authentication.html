@@ -210,7 +210,7 @@
 
 <p>This url:</p>
 
-<pre><code>https://devapi.kitchenmonki.com/v2/token/grant?grant_type=client_credentials&amp;client_id=CLIENTID&amp;client_secret=CLIENTSECRET</code></pre>
+<pre><code>https://api-stage.kitchenmonki.com/v2/token/grant?grant_type=client_credentials&amp;client_id=CLIENTID&amp;client_secret=CLIENTSECRET</code></pre>
 
 <p>will return this json data:</p>
 
@@ -230,7 +230,7 @@
 
 <p>Direct the user to the following url. <strong>DO NOT</strong> include your client secret.</p>
 
-<pre><code>https://dev.kitchenmonki.com/authorize?client_id=CLIENTID&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fwww.example.com%2Fapi_helper.php</code></pre>
+<pre><code>http://stage.kitchenmonki.com/authorize?client_id=CLIENTID&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fwww.example.com%2Fapi_helper.php</code></pre>
 
 <p>After the user grants access on that page, it will redirect the user back to your redirect uri</p>
 
@@ -242,7 +242,7 @@
 
 <p>Authorization codes expire in 30 seconds. Retrieve the access token from this url, passing the authorization code in the &#8220;code&#8221; parameter:</p>
 
-<pre><code>https://devapi.kitchenmonki.com/v2/token/grant?grant_type=authorization_code&amp;code=YT0pRFSc1DW9RdRFN93AlbsDnhpFoz3JHSBSybuoh2k&amp;client_id=CLIENTID&amp;client_secret=CLIENTSECRET&amp;redirect_uri=http%3A%2F%2Fwww.example.com%2Fapi_helper.php
+<pre><code>https://api-stage.kitchenmonki.com/v2/token/grant?grant_type=authorization_code&amp;code=YT0pRFSc1DW9RdRFN93AlbsDnhpFoz3JHSBSybuoh2k&amp;client_id=CLIENTID&amp;client_secret=CLIENTSECRET&amp;redirect_uri=https%3A%2F%2Fwww.example.com%2Fapi_helper.php
 
 {
   access_token: &quot;jxfBpTsr0GYuF_W1bqgOImHvEgN34_1BqpaNhGTFDLs&quot;,
@@ -258,7 +258,7 @@
 
 <p>Javascript popup example:</p>
 
-<pre><code>var url = &#39;https://dev.kitchenmonki.com/authorize?display=popup&amp;client_id=CLIENTID&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fwww.example.com%2Fapi_helper.php&#39;;
+<pre><code>var url = &#39;http://stage.kitchenmonki.com/authorize?display=popup&amp;client_id=CLIENTID&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fwww.example.com%2Fapi_helper.php&#39;;
 window.open(url, &quot;code_popup&quot;, &quot;width=500,height=300&quot;);</code></pre>
 <hr />
 <h3 id='getting_an_access_token_via_a_refresh_token'>Getting an access token via a refresh token</h3>
@@ -267,7 +267,7 @@ window.open(url, &quot;code_popup&quot;, &quot;width=500,height=300&quot;);</cod
 
 <p>Use this url to get a new access token:</p>
 
-<pre><code>https://devapi.kitchenmonki.com/v2/token/grant?grant_type=refresh_token&amp;client_id=CLIENTID&amp;client_secret=CLIENTSECRET&amp;refresh_token=H2fdWAq0ZY4uwuwfSOYigcL_LhBVtYLSfm66ATSwO58</code></pre>
+<pre><code>https://api-stage.kitchenmonki.com/v2/token/grant?grant_type=refresh_token&amp;client_id=CLIENTID&amp;client_secret=CLIENTSECRET&amp;refresh_token=H2fdWAq0ZY4uwuwfSOYigcL_LhBVtYLSfm66ATSwO58</code></pre>
 
 <p>A new access token and refresh token is issued. Note that the old refresh token will be invalidated by this call.</p>
 
@@ -286,10 +286,10 @@ window.open(url, &quot;code_popup&quot;, &quot;width=500,height=300&quot;);</cod
 <p>Including the token in the header:</p>
 
 <pre><code>GET /v2/queue HTTP/1.0
-Host: https://devapi.kitchenmonki.com
+Host: https://api-stage.kitchenmonki.com
 Authorization: Bearer iG2QKFT6Ox1BG7IXN6y2xOvxu9kPUSmOqVmv0VM42cc</code></pre>
 
-<p>View the various API methods available, their required parameters, and try them out using the <a href='https://dev.kitchenmonki.com/api_docs/console'>API Test Console</a></p>
+<p>View the various API methods available, their required parameters, and try them out using the <a href='http://stage.kitchenmonki.com/api_docs/console'>API Test Console</a></p>
   </div>
 </div>
 

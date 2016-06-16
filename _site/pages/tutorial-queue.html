@@ -210,7 +210,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/queue/[recipe_id]&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/queue/[recipe_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
 
 <p>successful response:</p>
@@ -232,7 +232,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/queue/[recipe_id]&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/queue/[recipe_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -254,7 +254,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/queue&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/queue&#39; \
 	-d limit=100 \
 	-d offset=1000 \
 	-d return_fields=title \

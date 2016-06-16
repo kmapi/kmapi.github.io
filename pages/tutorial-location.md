@@ -34,7 +34,7 @@ call simply creates a new location for a user.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/location' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/location' \
 		-H "Authorization: Bearer [USER_TOKEN]"
 
 successful response:
@@ -68,7 +68,7 @@ provided at the end of the request uri.
 
 request:
 
-	curl -X PUT 'http://devapi.kitchenmonki.com/v2/location/[location_id]' \
+	curl -X PUT 'https://api-stage.kitchenmonki.com/v2/location/[location_id]' \
 		-d name=Pioneer+Square \
 		-d locality=98101 \
 		-d active=1 \
@@ -96,7 +96,7 @@ to constrict or widen the area to search for stores in.
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/store' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/store' \
 		-d text=98101
 		-d radius=5000
 		-H "Authorization: Bearer [USER_TOKEN]" \
@@ -131,7 +131,7 @@ If a *store_id* is known, then the get store by id api call can be used to reque
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/store/[store_id]' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/store/[store_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -163,7 +163,7 @@ relationship.  Both parameters *store_id* and *location_id* are required.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/store' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/store' \
 		-d store_id=[store_id]
 		-d location_id=[location_id]
 		-H "Authorization: Bearer [USER_TOKEN]" \
@@ -187,7 +187,7 @@ specifying a store where to buy it, then the default store will be chosen.
 
 request:
 
-	curl -X PUT 'http://devapi.kitchenmonki.com/v2/store' \
+	curl -X PUT 'https://api-stage.kitchenmonki.com/v2/store' \
 		-d store_id=[store_id]
 		-d location_id=[location_id]
 		-H "Authorization: Bearer [USER_TOKEN]" \
@@ -208,7 +208,7 @@ to the end of the request uri and make the request with the DELETE method.
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/location/[location_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/location/[location_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -230,7 +230,7 @@ To get a location's information including all of its associated stores, use the 
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/location/[location_id]' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/location/[location_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -271,7 +271,7 @@ and location information will be included in the response data parameter.
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/location/all' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/location/all' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:

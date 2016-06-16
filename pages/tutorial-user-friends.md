@@ -23,7 +23,7 @@ group: 'tutorial'
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/user/[user_id]/following/[followee_id]' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/user/[user_id]/following/[followee_id]' \
 		-H "Authorization: Bearer [FOLLOW_TOKEN]"
 
 successful response:
@@ -41,7 +41,7 @@ successful response:
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/user/[user_id]/following/[followee_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/user/[user_id]/following/[followee_id]' \
 		-H "Authorization: Bearer [FOLLOW_TOKEN]" \
 
 successful response:
@@ -62,7 +62,7 @@ successful response:
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/user/[user_id]/following' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/user/[user_id]/following' \
 		-H "Authorization: Bearer [FOLLOW_TOKEN]" \
 
 successful response:
@@ -79,7 +79,7 @@ successful response:
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/user/[user_id]/followers' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/user/[user_id]/followers' \
 		-H "Authorization: Bearer [FOLLOW_TOKEN]" \
 
 successful response:
@@ -94,7 +94,7 @@ successful response:
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/user/[user_id]/friends' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/user/[user_id]/friends' \
 		-H "Authorization: Bearer [FOLLOW_TOKEN]" \
 
 successful response:

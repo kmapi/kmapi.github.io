@@ -220,7 +220,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/list&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/list&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
 
 <p>successful response:</p>
@@ -247,7 +247,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/list/[list_id]/item&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/list/[list_id]/item&#39; \
 	-d ingredient_id=45 \
 	-d ingredient_custom=0 \
 	-d quantity=5 \
@@ -292,7 +292,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/list/[list_id]/item&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/list/[list_id]/item&#39; \
 	-d data=[form encoded json data parameter] \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \
 	-H &quot;Content-Type: application/x-www-form-urlencoded&quot;</code></pre>
@@ -311,7 +311,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/list/[list_id]&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/list/[list_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -327,7 +327,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/list/[list_item_id]/item&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/list/[list_item_id]/item&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -343,7 +343,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/list/[list_id]&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/list/[list_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -372,7 +372,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/list/all&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/list/all&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>

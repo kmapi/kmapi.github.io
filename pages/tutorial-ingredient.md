@@ -39,7 +39,7 @@ a user friendly and efficient process.
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/ingredient/search' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/ingredient/search' \
 		-d text=rice \
 		-d limit=100 \
 		-d offset=1000 \
@@ -78,7 +78,7 @@ at the end of the request uri and send the request via the GET method.
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/ingredient/[ingredient_id]' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/ingredient/[ingredient_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:

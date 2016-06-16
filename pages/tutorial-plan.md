@@ -31,7 +31,7 @@ which will be used in any shopping list item quantity calculations.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/plan/item' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/plan/item' \
 		-d recipe_id=[recipe_id]
 		-d meal=dinner
 		-d date=2013-04-15
@@ -68,7 +68,7 @@ the date is omitted Kitchen Monki will assume the date be set to 'today'.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/plan/note' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/plan/note' \
 		-d meal=dinner
 		-d text=not+too+spicy
 		-d date=2013-04-15
@@ -102,7 +102,7 @@ and make the api calls as specified in the examples below.
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/plan/[plan_item_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/plan/[plan_item_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -121,7 +121,7 @@ successful response:
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/plan/[plan_note_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/plan/[plan_note_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -148,7 +148,7 @@ not to return the grocery shopping list along with the other data in the respons
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/plan/[plan_id]' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/plan/[plan_id]' \
 		-d start=2013-04-08 \
 		-d end=2013-04-12 \
 		-d recipe_return_fields=title,ingredients \

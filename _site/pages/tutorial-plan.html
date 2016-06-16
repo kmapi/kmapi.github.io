@@ -212,7 +212,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/plan/item&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/plan/item&#39; \
 	-d recipe_id=[recipe_id]
 	-d meal=dinner
 	-d date=2013-04-15
@@ -243,7 +243,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/plan/note&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/plan/note&#39; \
 	-d meal=dinner
 	-d text=not+too+spicy
 	-d date=2013-04-15
@@ -272,7 +272,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/plan/[plan_item_id]&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/plan/[plan_item_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -289,7 +289,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/plan/[plan_note_id]&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/plan/[plan_note_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -306,7 +306,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/plan/[plan_id]&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/plan/[plan_id]&#39; \
 	-d start=2013-04-08 \
 	-d end=2013-04-12 \
 	-d recipe_return_fields=title,ingredients \

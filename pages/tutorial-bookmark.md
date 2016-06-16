@@ -25,7 +25,7 @@ request with the POST method.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/bookmark/[recipe_id]' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/bookmark/[recipe_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]"
 
 successful response:
@@ -53,7 +53,7 @@ call via the DELETE method.
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/bookmark/[recipe_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/bookmark/[recipe_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -83,7 +83,7 @@ to specify the key values in the response data array for the convenience of your
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/bookmark' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/bookmark' \
 		-d limit=100 \
 		-d offset=1000 \
 		-d return_fields=title \

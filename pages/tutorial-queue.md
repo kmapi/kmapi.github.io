@@ -25,7 +25,7 @@ To add a recipe to the queue, use the queue recipe call, supplying the *recipe_i
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/queue/[recipe_id]' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/queue/[recipe_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]"
 
 successful response:
@@ -52,7 +52,7 @@ To remove a recipe from the queue, use the dequeue recipe call as shown in the e
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/queue/[recipe_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/queue/[recipe_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -81,7 +81,7 @@ in the response data, and an array_key to specify the values to be used as the k
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/queue' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/queue' \
 		-d limit=100 \
 		-d offset=1000 \
 		-d return_fields=title \

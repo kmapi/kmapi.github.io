@@ -212,7 +212,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/photo&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/photo&#39; \
 	-d data=[base64 encoded image data] \
 	-d recipe_id=[recipe_id] \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
@@ -225,7 +225,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/photo/[photo_id]&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/photo/[photo_id]&#39; \
 	-d is_main=1 \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
 
@@ -237,7 +237,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/photo/[photo_id]&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/photo/[photo_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -253,7 +253,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/photo/[photo_id]&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/photo/[photo_id]&#39; \
 	-d width=100 \
 	-d height=100 \
 	-d adaptive=1 \

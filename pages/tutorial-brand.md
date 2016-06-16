@@ -32,7 +32,7 @@ manufacturer, or brand name desired to be added to the Kitchen Monki database.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/brand/family' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/brand/family' \
 		-d name=Kraft
 		-H "Authorization: Bearer [USER_TOKEN]"
 
@@ -56,7 +56,7 @@ parameter - brand_text which is the full label of the brand item.  For instance,
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/brand/[brand_family_id]/item' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/brand/[brand_family_id]/item' \
 		-d brand_text=Kraft+Mayonnaise
 		-H "Authorization: Bearer [USER_TOKEN]"
 
@@ -81,7 +81,7 @@ Provide the *brand_family_id* to delete using the DELETE method to remove a bran
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/brand/family/[brand_family_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/brand/family/[brand_family_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -102,7 +102,7 @@ Provide the *brand_item_id* to delete using the DELETE method to remove a brand 
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/brand/item/[brand_item_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/brand/item/[brand_item_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -129,7 +129,7 @@ Use this call to get a specific brand family with a known *brand_family_id*
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/brand/family' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/brand/family' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -153,7 +153,7 @@ Use this call to get a specific brand item with a known *brand_item_id*
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/brand/item' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/brand/item' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -183,7 +183,7 @@ This call will return a list of all available brand families available on Kitche
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/brand/all' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/brand/all' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:

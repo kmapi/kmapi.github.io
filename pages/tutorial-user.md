@@ -31,7 +31,7 @@ response will be the newly created user's id and access token to save.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/user' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/user' \
 		-d email=xxxxxx@xxxxxx.com \
 		-d name_display=John+Smith \
 		-d password=p@S$w0rD \
@@ -69,7 +69,7 @@ data parameter in json format:
 
 request:
 
-	curl -X PUT 'http://devapi.kitchenmonki.com/v2/user/[user_id]' \
+	curl -X PUT 'https://api-stage.kitchenmonki.com/v2/user/[user_id]' \
 		-d data=[form encoded json data parameter] \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 		-H "Content-Type: application/x-www-form-urlencoded"
@@ -94,7 +94,7 @@ the *user_id* to the delete user api call as shown below.
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/user/[user_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/user/[user_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -113,7 +113,7 @@ included in the response.
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/user/[user_id]' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/user/[user_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -140,7 +140,7 @@ If the call is made using a user token, then limited fields will be returned in 
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/user/all' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/user/all' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:

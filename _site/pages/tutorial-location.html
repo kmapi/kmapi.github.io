@@ -222,7 +222,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/location&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/location&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
 
 <p>successful response:</p>
@@ -249,7 +249,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X PUT &#39;http://devapi.kitchenmonki.com/v2/location/[location_id]&#39; \
+<pre><code>curl -X PUT &#39;https://api-stage.kitchenmonki.com/v2/location/[location_id]&#39; \
 	-d name=Pioneer+Square \
 	-d locality=98101 \
 	-d active=1 \
@@ -269,7 +269,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/store&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/store&#39; \
 	-d text=98101
 	-d radius=5000
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
@@ -299,7 +299,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/store/[store_id]&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/store/[store_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -325,7 +325,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/store&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/store&#39; \
 	-d store_id=[store_id]
 	-d location_id=[location_id]
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
@@ -342,7 +342,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X PUT &#39;http://devapi.kitchenmonki.com/v2/store&#39; \
+<pre><code>curl -X PUT &#39;https://api-stage.kitchenmonki.com/v2/store&#39; \
 	-d store_id=[store_id]
 	-d location_id=[location_id]
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
@@ -355,7 +355,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/location/[location_id]&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/location/[location_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -371,7 +371,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/location/[location_id]&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/location/[location_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -406,7 +406,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X GET &#39;http://devapi.kitchenmonki.com/v2/location/all&#39; \
+<pre><code>curl -X GET &#39;https://api-stage.kitchenmonki.com/v2/location/all&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>

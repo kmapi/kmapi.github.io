@@ -30,7 +30,7 @@ to adding all sorts of things to it like a title, steps, and ingredients.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/recipe' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/recipe' \
 		-H "Authorization: Bearer [USER_TOKEN]"
 
 successful response:
@@ -68,7 +68,7 @@ data parameter in json format:
 
 request:
 
-	curl -X PUT 'http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]' \
+	curl -X PUT 'https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]' \
 		-d data=[form encoded json data parameter] \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 		-H "Content-Type: application/x-www-form-urlencoded"
@@ -96,7 +96,7 @@ will show you how to add ingredients to your step.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/step' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/step' \
 		-d title=Marinade+the+beef
 		-d description=Mix+the+ingredients+and+soak+the+beef+for+1+hour
 		-d sequence=3
@@ -141,7 +141,7 @@ information.  the *ingredient_id* is the id of the generic ingredient data used 
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/ingredient' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/ingredient' \
 		-d title=
 		-H "Authorization: Bearer [USER_TOKEN]" \
 		-H "Content-Type: application/x-www-form-urlencoded"
@@ -223,7 +223,7 @@ data parameter in json format:
 
 request:
 
-	curl -X PUT 'http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]' \
+	curl -X PUT 'https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]' \
 		-d data=[form encoded json data parameter] \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 		-H "Content-Type: application/x-www-form-urlencoded"
@@ -249,7 +249,7 @@ ingredient missing one, then try to republish.
 
 request:
 
-	curl -X PUT 'http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/publish' \
+	curl -X PUT 'https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/publish' \
 		-H "Authorization: Bearer [USER_TOKEN]"
 
 successful response:
@@ -275,7 +275,7 @@ a recipe will also remove all of the steps and recipe ingredients associated wit
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -302,7 +302,7 @@ ingredients will automatically be deleted as well.
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/step' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/step' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -320,7 +320,7 @@ successful response:
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/ingredient' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/ingredient' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:

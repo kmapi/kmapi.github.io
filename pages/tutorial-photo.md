@@ -27,7 +27,7 @@ data should be passed in the data parameter.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/photo' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/photo' \
 		-d data=[base64 encoded image data] \
 		-d recipe_id=[recipe_id] \
 		-H "Authorization: Bearer [USER_TOKEN]"
@@ -49,7 +49,7 @@ is_main will be set to 1 for the main recipe photo object.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/photo/[photo_id]' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/photo/[photo_id]' \
 		-d is_main=1 \
 		-H "Authorization: Bearer [USER_TOKEN]"
 
@@ -69,7 +69,7 @@ the delete photo api call.
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/photo/[photo_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/photo/[photo_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -95,7 +95,7 @@ use width=100px and height=100px as the default values.  By default also adaptiv
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/photo/[photo_id]' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/photo/[photo_id]' \
 		-d width=100 \
 		-d height=100 \
 		-d adaptive=1 \

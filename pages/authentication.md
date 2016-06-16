@@ -24,7 +24,7 @@ Your client credentials are associated with a Kitchen Monki user, therefore any 
 
 This url:
 
-	https://devapi.kitchenmonki.com/v2/token/grant?grant_type=client_credentials&client_id=CLIENTID&client_secret=CLIENTSECRET
+	https://api-stage.kitchenmonki.com/v2/token/grant?grant_type=client_credentials&client_id=CLIENTID&client_secret=CLIENTSECRET
 
 will return this json data:
 
@@ -48,7 +48,7 @@ Enabling api calls for a different user requires that the user authorize the cli
 
 Direct the user to the following url. **DO NOT** include your client secret.
 
-	https://dev.kitchenmonki.com/authorize?client_id=CLIENTID&response_type=code&redirect_uri=http%3A%2F%2Fwww.example.com%2Fapi_helper.php
+	http://stage.kitchenmonki.com/authorize?client_id=CLIENTID&response_type=code&redirect_uri=https%3A%2F%2Fwww.example.com%2Fapi_helper.php
 
 After the user grants access on that page, it will redirect the user back to your redirect uri
 
@@ -62,7 +62,7 @@ At this point you should capture the code and use it to get an access token
 
 Authorization codes expire in 30 seconds. Retrieve the access token from this url, passing the authorization code in the "code" parameter:
 
-	https://devapi.kitchenmonki.com/v2/token/grant?grant_type=authorization_code&code=YT0pRFSc1DW9RdRFN93AlbsDnhpFoz3JHSBSybuoh2k&client_id=CLIENTID&client_secret=CLIENTSECRET&redirect_uri=http%3A%2F%2Fwww.example.com%2Fapi_helper.php
+	https://api-stage.kitchenmonki.com/v2/token/grant?grant_type=authorization_code&code=YT0pRFSc1DW9RdRFN93AlbsDnhpFoz3JHSBSybuoh2k&client_id=CLIENTID&client_secret=CLIENTSECRET&redirect_uri=https%3A%2F%2Fwww.example.com%2Fapi_helper.php
 
 	{
 	  access_token: "jxfBpTsr0GYuF_W1bqgOImHvEgN34_1BqpaNhGTFDLs",
@@ -78,7 +78,7 @@ If you want to open the authorization page in a popup window, the "display" para
 
 Javascript popup example:
 
-	var url = 'https://dev.kitchenmonki.com/authorize?display=popup&client_id=CLIENTID&response_type=code&redirect_uri=http%3A%2F%2Fwww.example.com%2Fapi_helper.php';
+	var url = 'http://stage.kitchenmonki.com/authorize?display=popup&client_id=CLIENTID&response_type=code&redirect_uri=https%3A%2F%2Fwww.example.com%2Fapi_helper.php';
 	window.open(url, "code_popup", "width=500,height=300");
 
 --------------------
@@ -89,7 +89,7 @@ When getting an access token, a refresh token will also be issued. Access tokens
 
 Use this url to get a new access token:
 
-	https://devapi.kitchenmonki.com/v2/token/grant?grant_type=refresh_token&client_id=CLIENTID&client_secret=CLIENTSECRET&refresh_token=H2fdWAq0ZY4uwuwfSOYigcL_LhBVtYLSfm66ATSwO58
+	https://api-stage.kitchenmonki.com/v2/token/grant?grant_type=refresh_token&client_id=CLIENTID&client_secret=CLIENTSECRET&refresh_token=H2fdWAq0ZY4uwuwfSOYigcL_LhBVtYLSfm66ATSwO58
 
 A new access token and refresh token is issued. Note that the old refresh token will be invalidated by this call.
 
@@ -110,10 +110,10 @@ Once you have an access token, you can make an api call. The API uses a RESTful 
 Including the token in the header:
 
 	GET /v2/queue HTTP/1.0
-	Host: https://devapi.kitchenmonki.com
+	Host: https://api-stage.kitchenmonki.com
 	Authorization: Bearer iG2QKFT6Ox1BG7IXN6y2xOvxu9kPUSmOqVmv0VM42cc
 
-View the various API methods available, their required parameters, and try them out using the [API Test Console](https://dev.kitchenmonki.com/api_docs/console)
+View the various API methods available, their required parameters, and try them out using the [API Test Console](http://stage.kitchenmonki.com/api_docs/console)
 
 
 

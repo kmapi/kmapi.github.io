@@ -25,7 +25,7 @@ pertinent tag information will also be returned in the data parameter as an arra
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/meta/tags' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/meta/tags' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -58,7 +58,7 @@ like the number of recipes they have created.
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/meta/totals' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/meta/totals' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:

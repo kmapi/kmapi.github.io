@@ -220,7 +220,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/recipe&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/recipe&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
 
 <p>successful response:</p>
@@ -250,7 +250,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X PUT &#39;http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]&#39; \
+<pre><code>curl -X PUT &#39;https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]&#39; \
 	-d data=[form encoded json data parameter] \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \
 	-H &quot;Content-Type: application/x-www-form-urlencoded&quot;</code></pre>
@@ -269,7 +269,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/step&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/step&#39; \
 	-d title=Marinade+the+beef
 	-d description=Mix+the+ingredients+and+soak+the+beef+for+1+hour
 	-d sequence=3
@@ -298,7 +298,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X POST &#39;http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/ingredient&#39; \
+<pre><code>curl -X POST &#39;https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/ingredient&#39; \
 	-d title=
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \
 	-H &quot;Content-Type: application/x-www-form-urlencoded&quot;</code></pre>
@@ -366,7 +366,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X PUT &#39;http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]&#39; \
+<pre><code>curl -X PUT &#39;https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]&#39; \
 	-d data=[form encoded json data parameter] \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \
 	-H &quot;Content-Type: application/x-www-form-urlencoded&quot;</code></pre>
@@ -385,7 +385,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X PUT &#39;http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/publish&#39; \
+<pre><code>curl -X PUT &#39;https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/publish&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot;</code></pre>
 
 <p>successful response:</p>
@@ -404,7 +404,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -424,7 +424,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/step&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/step&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>
@@ -440,7 +440,7 @@
 
 <p>request:</p>
 
-<pre><code>curl -X DELETE &#39;http://devapi.kitchenmonki.com/v2/recipe/[recipe_id]/ingredient&#39; \
+<pre><code>curl -X DELETE &#39;https://api-stage.kitchenmonki.com/v2/recipe/[recipe_id]/ingredient&#39; \
 	-H &quot;Authorization: Bearer [USER_TOKEN]&quot; \</code></pre>
 
 <p>successful response:</p>

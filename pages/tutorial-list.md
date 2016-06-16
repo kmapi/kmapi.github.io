@@ -32,7 +32,7 @@ The first step is to create a shopping list, no parameters required.
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/list' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/list' \
 		-H "Authorization: Bearer [USER_TOKEN]"
 
 successful response:
@@ -69,7 +69,7 @@ and their abbreviations so "lbs" and "pounds" would map to the same unit of meas
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/list/[list_id]/item' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/list/[list_id]/item' \
 		-d ingredient_id=45 \
 		-d ingredient_custom=0 \
 		-d quantity=5 \
@@ -123,7 +123,7 @@ data parameter in json format:
 
 request:
 
-	curl -X POST 'http://devapi.kitchenmonki.com/v2/list/[list_id]/item' \
+	curl -X POST 'https://api-stage.kitchenmonki.com/v2/list/[list_id]/item' \
 		-d data=[form encoded json data parameter] \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 		-H "Content-Type: application/x-www-form-urlencoded"
@@ -148,7 +148,7 @@ its associated list items from the system as well.
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/list/[list_id]' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/list/[list_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -168,7 +168,7 @@ To delete a specific list item supply the *list_item_id* to the delete list item
 
 request:
 
-	curl -X DELETE 'http://devapi.kitchenmonki.com/v2/list/[list_item_id]/item' \
+	curl -X DELETE 'https://api-stage.kitchenmonki.com/v2/list/[list_item_id]/item' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -191,7 +191,7 @@ list object.
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/list/[list_id]' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/list/[list_id]' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
@@ -225,7 +225,7 @@ To get a list of all of a user's list ids, make the get all lists api call.  No 
 
 request:
 
-	curl -X GET 'http://devapi.kitchenmonki.com/v2/list/all' \
+	curl -X GET 'https://api-stage.kitchenmonki.com/v2/list/all' \
 		-H "Authorization: Bearer [USER_TOKEN]" \
 
 successful response:
